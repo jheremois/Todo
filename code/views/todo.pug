@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/todo.css")
+        link(href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet')
+        title Todo
+    body
+        header
+            h1 Todo
+            #options
+                button#new_task +
+        form#form(action="/", method="post")
+            .form_content
+                textarea#write_task(name="task", cols="30", rows="4" placeholder='Your task...')
+                .form_buttons
+                    h3#cancel Cancel
+                    button Save
+        section
+            -for(i = 0; i < task.length; i++)
+                .do               
+                    .task
+                        #done
+                            input(type="checkbox", name="done") 
+                        p#doit= task[i].task
+    script(src="js/todo.js")

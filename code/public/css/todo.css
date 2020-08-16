@@ -1,0 +1,117 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Cabin';
+    color: #ebebeb;
+    outline: none;
+}
+body{
+    background-color: #161616;
+}
+button{
+    background-color: transparent;
+    border: none;
+}
+/*header*/
+h1{
+    padding: 40px 0px;
+    font-size: 300%;
+    display: flex;
+    justify-content: center;
+    color: #5ef15e;
+    border-radius: 0px 0px 50px 50px;
+}
+#options{
+    padding: 0px 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+header #options button{
+    display: flex;
+    justify-content: center;
+    color: #5ef15e;
+    font-size: 360%;
+    cursor: pointer;
+}
+/*form*/
+form{
+    display: none;
+    overflow: hidden;
+    justify-content: center;
+    transition-property: all;
+    transform: scale(0);
+    transition-duration: 500ms;
+    padding: 20px 0px;
+}
+form .form_content{
+    width: 40%;
+    border-radius: 30px;
+    padding: 3%;
+    background-color: #2d2d2d;
+}
+form .form_content textarea{
+    width: 100%;
+    background-color: transparent;
+    font-size: 110%;
+    border: solid 3px transparent;
+    resize: none;
+}
+form .form_buttons{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+form .form_buttons h3, form .form_buttons button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 31%;
+    height: 38px;
+    font-weight: 900;
+    font-size: 150%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+form .form_buttons h3{
+    background-color: #1a1a1a;
+}
+form .form_buttons button{
+    background-color: #5ef15ed8;
+}
+/*section*/
+section{
+    display: grid;
+}
+.do{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.task{
+    padding: 10px;
+    border-radius: 30px;
+    width: 50%;
+    background-color: #080c0a;
+    display: flex;
+}
+#done{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+#doit{
+    width: 90%;
+    font-size: 150%;
+}
+@media screen and (max-width: 568px){
+    header .options h2{
+        width: 11%;
+    }
+    form .form_content{
+        width: 80%;
+    }
+    .task{
+        width: 80%;
+    }
+}
