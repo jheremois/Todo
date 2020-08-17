@@ -13,15 +13,19 @@ html(lang="en")
                 button#new_task +
         form#form(action="/", method="post")
             .form_content
-                textarea#write_task(name="task", cols="30", rows="4" placeholder='Your task...')
+                textarea#write_task(name="task", cols="30", rows="4" placeholder='Your task...' maxlength='230')
                 .form_buttons
                     h3#cancel Cancel
                     button Save
-        section
-            -for(i = 0; i < task.length; i++)
-                .do               
-                    .task
-                        #done
-                            input(type="checkbox", name="done") 
-                        p#doit= task[i].task
+        section#section
+            -if(task.length < 1)
+                h2#sugerence Create a new task
+                    img(src="icons/up.png", alt="")
+            -else if(task.length >= 1)
+                -for(i = 0; i < task.length; i++)
+                    form(action=`/delete/${task[i].id}`, method="get").do               
+                        .task
+                            button#done
+                                img(src="icons/done.png", alt="") 
+                            p#doit= task[i].task
     script(src="js/todo.js")
