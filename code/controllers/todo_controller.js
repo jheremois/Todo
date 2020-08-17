@@ -2,7 +2,7 @@ const db_pool = require('../database/conection')
 
 exports.todo_main = (req,res)=> {
 
-    db_pool.query('SELECT * FROM tasks',(err,result)=>{
+    db_pool.query('SELECT * FROM tasks',(err,result)=> {
         res.render('todo',{
             task: result
         })
@@ -10,7 +10,7 @@ exports.todo_main = (req,res)=> {
     
 }
 
-exports.todo_save_task = async(req, res) =>{
+exports.todo_save_task = async(req, res)=> {
     
     const {task} = req.body
 
@@ -20,4 +20,12 @@ exports.todo_save_task = async(req, res) =>{
 
     res.redirect('/')
 
+}
+
+exports.todo_dalete = async (req, res)=> {
+    const {id} = req.params
+
+    const Delete = await db_pool.query(`DELETE FROM tasks WHERE id = ${id}`)
+
+    res.redirect('/')
 }
