@@ -25,7 +25,7 @@ exports.todo_save_task = async(req, res)=> {
 exports.todo_dalete = async (req, res)=> {
     const {id} = req.params
 
-    const Delete = await db_pool.query(`DELETE FROM tasks WHERE id = ${id}`)
+    const done = await db_pool.query(`DELETE FROM tasks WHERE id = ${id}`)
 
     res.redirect('/')
 }

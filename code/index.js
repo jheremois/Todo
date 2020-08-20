@@ -2,7 +2,6 @@ const express = require('express')
 const http = require('http')
 const path = require('path')
 const env = require('node-env-file')
-const morgan = require('morgan')
 
 const app = express()
 
@@ -17,8 +16,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 env('./.env')
 
 app.use(express.urlencoded({extended: true}))
-
-app.use(morgan('dev'))
 
 
 // Sever
@@ -43,4 +40,4 @@ const port = app.get('port')
 
 const server =http.createServer(app)
 
-server.listen(port, console.log(`Host: ${port}`))
+server.listen(port)

@@ -22,14 +22,13 @@ header{
     align-items: center;
     justify-content: space-between;
     background-color: #0f4c75;
-    -webkit-box-shadow: 0px 3px 19px 0px #3030307c;
 }
 h1{
-    font-size: 300%;
+    font-size: 360%;
     color: #fddb3a;
 }
 #options{
-    padding: 5px 30px;
+    padding: 0px 30px;
     display: flex;
     justify-content: flex-end;
 }
@@ -86,6 +85,17 @@ header #options button{
     background-color: #ffec3e;
 }
 /*section*/
+.top{
+    transform: translateY(-1px);
+    height: 25px;
+    background-color: #0f4c75;
+}
+.curve{
+    transform: translateY(2px);
+    background-color: #1b262c;
+    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
 .do{
     display: flex;
     justify-content: center;
@@ -106,7 +116,7 @@ header #options button{
     width: 3%;
     margin: 3px 10px;
 }
-#done:hover{background-color: #fddc3a60;}
+#done:hover{background-color: #fcff3abe;}
 #done img{
     width: 100%;
     -webkit-filter: invert(100%);

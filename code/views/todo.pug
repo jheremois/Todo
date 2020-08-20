@@ -3,17 +3,20 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon", href="icons/favicon.ico", type="image/x-icon")
         link(rel="stylesheet", href="css/todo.css")
         link(href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet')
         title Todo
-    body
+    block body
         header
             h1 Todo
             #options
                 button#new_task +
+        .top
+            .curve
         form#form(action="/", method="post")
             .form_content
-                textarea#write_task(name="task", cols="30", rows="4" placeholder='Your task...' maxlength='230')
+                textarea#write_task(name="task", cols="30", rows="4" placeholder='Your task...' minlength='2' maxlength='230' required)
                 .form_buttons
                     h3#cancel Cancel
                     button Save

@@ -16,7 +16,7 @@ const pool = mysql.createPool(conection)
 
 pool.getConnection((err,conection)=>{
     if (conection){conection.release()}
-    console.log('mysql online')
+    
     return;
 })
 
