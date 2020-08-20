@@ -39,7 +39,7 @@ CREATE TABLE 'your table name'(
 
 ```
 
-**Environment Variables on the .env file required**
+**Environment Variables required in the .env file **
 
 `MYSQL_HOST`
 
